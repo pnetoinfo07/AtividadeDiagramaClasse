@@ -10,19 +10,19 @@ namespace AtividadeDiagramaClasse
     {
         public void CalcularBonificacao(Gerente gerente)
         {
-            throw new NotImplementedException();
+            gerente.RealizarBalancoAnualFuncionario();
         }
         public void CalcularBonificacao(Caixa caixa)
         {
-            throw new NotImplementedException(); 
+            caixa.RealizarBalancoAnualFuncionario();
         }
         public void CalcularBonificacao(Marketing marketing)
         {
-            throw new NotImplementedException();
+            marketing.RealizarBalancoAnualFuncionario();
         }
         public void CalcularBonificacao(Desenvolvedor desenvolvedor)
         {
-            throw new NotImplementedException();
+            desenvolvedor.RealizarBalancoAnualFuncionario();
         }
     }
 }

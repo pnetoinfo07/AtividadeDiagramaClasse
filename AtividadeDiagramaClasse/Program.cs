@@ -1,6 +1,8 @@
 ﻿using AtividadeDiagramaClasse;
 
-Caixa cx1 = new Caixa(1, "Paulo", 24, 1500);
+//Caixa cx1 = new Caixa(1, "Paulo", 24, 1500);
 
-GerenciadorEmpresarial ger = new GerenciadorEmpresarial();
-ger.CalcularBonificacao(cx1);
+//GerenciadorEmpresarial ger = new GerenciadorEmpresarial();
+//ger.CalcularBonificacao(cx1);
+QuadroColaboradores quadro = new QuadroColaboradores();
+quadro.ExbirFuncionarios();
