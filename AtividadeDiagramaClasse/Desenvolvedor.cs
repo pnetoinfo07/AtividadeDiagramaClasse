@@ -12,18 +12,29 @@ namespace AtividadeDiagramaClasse
         public string Nome { get; set; }
         public int Idade { get; set; }
         private double Salario { get; set; }
+        public double BonusAnual { get; set; }
         public Desenvolvedor(int id, string nome, int idade, double salario)
         {
             Id = id;
             Nome = nome;
             Idade = idade;
             Salario = salario;
+            BonusAnual = Salario * 0.5;
         }
-
-        private void AplicarBonificacao()
+        private void AplicarBonificacaoAnual()
         {
-            double bonus = Salario * 0.5;
-            Console.WriteLine($"Sua bonficacao será {bonus}");
+            Console.WriteLine($"Sua bonficacao será {BonusAnual}");
+        }
+        private void AplicarProgressaoAnual()
+        {
+            Salario = Salario + (Salario * 0.20);
+            Console.WriteLine($"Seu novo sálario é {Salario}");
+        }
+        public void RealizarBalancoAnualFuncionario()
+        {
+            Console.WriteLine("---------- Balanço Anual ----------");
+            AplicarBonificacaoAnual();
+            AplicarProgressaoAnual();
         }
     }
 }

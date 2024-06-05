@@ -24,5 +24,13 @@ namespace AtividadeDiagramaClasse
         {
             Console.WriteLine($"Sua bonficacao será {Salario}");
         }
+        private void AplicarProgressaoAnual()
+        {
+
+        }
+        public void RealizarBalancoAnualFuncionario()
+        {
+
+        }
     }
 }

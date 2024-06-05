@@ -14,7 +14,7 @@ namespace AtividadeDiagramaClasse
         }
         public void CalcularBonificacao(Caixa caixa)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
         public void CalcularBonificacao(Marketing marketing)
         {

@@ -19,11 +19,18 @@ namespace AtividadeDiagramaClasse
             Idade = idade;
             Salario = salario;
         }
-
         private void AplicarBonificacao()
         {
             double bonus = Salario * 0.3;
             Console.WriteLine($"Sua bonficacao será {bonus}");
+        }
+        private void AplicarProgressaoAnual()
+        {
+
+        }
+        public void RealizarBalancoAnualFuncionario()
+        {
+
         }
     }
 }

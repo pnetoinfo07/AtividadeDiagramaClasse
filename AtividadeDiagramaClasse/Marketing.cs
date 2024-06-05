@@ -25,5 +25,13 @@ namespace AtividadeDiagramaClasse
             double bonus = Salario * 0.6;
             Console.WriteLine($"Sua bonficacao será {bonus}");
         }
+        private void AplicarProgressaoAnual()
+        {
+
+        }
+        public void RealizarBalancoAnualFuncionario()
+        {
+
+        }
     }
 }
