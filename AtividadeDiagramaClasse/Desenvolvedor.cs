@@ -19,8 +19,22 @@ namespace AtividadeDiagramaClasse
             Idade = idade;
             Salario = salario;
         }
+        public void RealizarFechamentoAnualFuncionario()
+        {
+            Console.WriteLine($"------ FECHAMENTO ANUAL {DateTime.Now.Year} -----------------------");
+            Console.WriteLine($"Cód Funcionario: {Id}");
+            Console.WriteLine($"Funcionario: {Nome}");
+            AplicarBonificacaoAnual();
+            AplicarProgressaoAnual();
+            Console.WriteLine($"----------------------------------------------------");
+        }
 
-        private void AplicarBonificacao()
+        private void AplicarProgressaoAnual()
+        {
+            Salario = Salario + (Salario * 0.15);
+            Console.WriteLine($"Seu sálario para o próximo ano será {Salario}");
+        }
+        private void AplicarBonificacaoAnual()
         {
             double bonus = Salario * 0.5;
             Console.WriteLine($"Sua bonficacao será {bonus}");
