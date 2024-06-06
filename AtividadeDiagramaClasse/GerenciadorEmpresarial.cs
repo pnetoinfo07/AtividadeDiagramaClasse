@@ -8,6 +8,11 @@ namespace AtividadeDiagramaClasse
 {
     public class GerenciadorEmpresarial
     {
+        public QuadroColaboradores Colaboradores { get; set; }
+        public GerenciadorEmpresarial()
+        {
+            Colaboradores = new QuadroColaboradores();
+        }
         public void CalcularBonificacao(Gerente gerente)
         {
             gerente.RealizarBalancoAnualFuncionario();
@@ -23,6 +28,10 @@ namespace AtividadeDiagramaClasse
         public void CalcularBonificacao(Desenvolvedor desenvolvedor)
         {
             desenvolvedor.RealizarBalancoAnualFuncionario();
+        }
+        public void ListarFuncionarios()
+        {
+
         }
     }
 }

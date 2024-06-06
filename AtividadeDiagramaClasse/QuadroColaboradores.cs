@@ -56,10 +56,5 @@ namespace AtividadeDiagramaClasse
         {
             throw new NotImplementedException();
         }
-        public void AplicarBonificacao(int tipoFuncionario, int idFuncionario)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }
