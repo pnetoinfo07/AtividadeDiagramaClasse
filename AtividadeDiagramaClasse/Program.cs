@@ -4,5 +4,5 @@
 
 //GerenciadorEmpresarial ger = new GerenciadorEmpresarial();
 //ger.CalcularBonificacao(cx1);
-QuadroColaboradores quadro = new QuadroColaboradores();
-quadro.ExbirFuncionarios();
+//QuadroColaboradores quadro = new QuadroColaboradores();
+//quadro.ExbirFuncionarios();
