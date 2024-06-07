@@ -20,7 +20,6 @@ namespace AtividadeDiagramaClasse
             FuncionariosGerente= new List<Gerente>();
             InicializarDados();
         }
-
         private void InicializarDados()
         {
             FuncionariosMarketing.Add(new Marketing(1, "Paulo", 24, 1500));
@@ -55,6 +54,34 @@ namespace AtividadeDiagramaClasse
         public void AdicionarGerente(Gerente gerente)
         {
             throw new NotImplementedException();
+        }
+        public void ListarGerente()
+        {
+            foreach (Gerente gerente in FuncionariosGerente)
+            {
+                gerente.ExibirDetalhesFuncionario();
+            }
+        }
+        public void ListarDesenvolvedor()
+        {
+            foreach (Desenvolvedor dev in FuncionariosDesenvolvedor)
+            {
+                dev.ExibirDetalhesFuncionario();
+            }
+        }
+        public void ListarMarketing()
+        {
+            foreach (Marketing marketing in FuncionariosMarketing)
+            {
+                marketing.ExibirDetalhesFuncionario();
+            }
+        }
+        public void ListarCaixa()
+        {
+            foreach (Caixa caixa in FuncionariosCaixa)
+            {
+                caixa.ExibirDetalhesFuncionario();
+            }
         }
     }
 }

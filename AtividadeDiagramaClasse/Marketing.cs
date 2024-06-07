@@ -36,5 +36,14 @@ namespace AtividadeDiagramaClasse
             AplicarBonificacaoAnual();
             AplicarProgressaoAnual();
         }
+
+        public void ExibirDetalhesFuncionario()
+        {
+            Console.WriteLine($"------ Funcionário {Id}-----------" +
+                                $"Nome: {Nome}" +
+                                $"Idade: {Idade}" +
+                                $"Salário: {Salario}" +
+                              $"----------------------------------");
+        }
     }
 }
