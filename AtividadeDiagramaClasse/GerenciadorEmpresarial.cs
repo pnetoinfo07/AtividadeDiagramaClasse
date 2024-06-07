@@ -31,7 +31,17 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarFuncionarios()
         {
-
+            Colaboradores.ListarMarketing();
+            Colaboradores.ListarDesenvolvedor();
+            Colaboradores.ListarGerente();
+            Colaboradores.ListarCaixa();
+        }
+        public void ListarBonificacaoAnualTodaEmpresa()
+        {
+            foreach(Caixa caixa in Colaboradores.FuncionariosCaixa)
+            {
+                CalcularBonificacao(caixa);
+            }
         }
     }
 }

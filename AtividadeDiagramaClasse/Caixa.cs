@@ -39,10 +39,10 @@ namespace AtividadeDiagramaClasse
         public void ExibirDetalhesFuncionario()
         {
             Console.WriteLine($"------ Funcionário {Id}-----------" +
-                                $"Nome: {Nome}" +
-                                $"Idade: {Idade}" +
-                                $"Salário: {Salario}" +
-                              $"----------------------------------");
+                                $"\n Nome: {Nome}" +
+                                $"\n Idade: {Idade}" +
+                                $"\n Salário: {Salario}" +
+                              $"\n ----------------------------------");
         }
     }
 }

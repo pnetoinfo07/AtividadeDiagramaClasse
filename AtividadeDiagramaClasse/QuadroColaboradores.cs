@@ -8,10 +8,10 @@ namespace AtividadeDiagramaClasse
 {
     public class QuadroColaboradores
     {
-        private List<Marketing> FuncionariosMarketing { get; set; }
-        private List<Caixa> FuncionariosCaixa { get; set; }
-        private List<Desenvolvedor> FuncionariosDesenvolvedor { get; set; }
-        private List<Gerente> FuncionariosGerente { get; set; }
+        public List<Marketing> FuncionariosMarketing { get; private set; }
+        public List<Caixa> FuncionariosCaixa { get; private set; }
+        public List<Desenvolvedor> FuncionariosDesenvolvedor { get; private set; }
+        public List<Gerente> FuncionariosGerente { get; private set; }
         public QuadroColaboradores()
         {
             FuncionariosMarketing = new List<Marketing>();
@@ -57,6 +57,7 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarGerente()
         {
+            Console.WriteLine("-------------------- Lista Gerente --------------------");
             foreach (Gerente gerente in FuncionariosGerente)
             {
                 gerente.ExibirDetalhesFuncionario();
@@ -64,6 +65,7 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarDesenvolvedor()
         {
+            Console.WriteLine("-------------------- Lista Desenvolvedor --------------------");
             foreach (Desenvolvedor dev in FuncionariosDesenvolvedor)
             {
                 dev.ExibirDetalhesFuncionario();
@@ -71,6 +73,7 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarMarketing()
         {
+            Console.WriteLine("-------------------- Lista Marketing --------------------");
             foreach (Marketing marketing in FuncionariosMarketing)
             {
                 marketing.ExibirDetalhesFuncionario();
@@ -78,6 +81,7 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarCaixa()
         {
+            Console.WriteLine("-------------------- Lista Caixa --------------------");
             foreach (Caixa caixa in FuncionariosCaixa)
             {
                 caixa.ExibirDetalhesFuncionario();
