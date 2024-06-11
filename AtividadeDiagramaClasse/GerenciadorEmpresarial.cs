@@ -38,9 +38,45 @@ namespace AtividadeDiagramaClasse
         }
         public void ListarBonificacaoAnualTodaEmpresa()
         {
-            foreach(Caixa caixa in Colaboradores.FuncionariosCaixa)
-            {
+            Console.WriteLine("------------ Bonificação Caixa --------------");
+            foreach (Caixa caixa in Colaboradores.FuncionariosCaixa)
+            {                
                 CalcularBonificacao(caixa);
+            }
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("------------ Bonificação Maketing --------------");
+            foreach (Marketing marketing in Colaboradores.FuncionariosMarketing)
+            {               
+                CalcularBonificacao(marketing);
+            }
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("------------ Bonificação Desenvolvedor --------------");
+            foreach (Desenvolvedor dev in Colaboradores.FuncionariosDesenvolvedor)
+            {                
+                CalcularBonificacao(dev);
+            }
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("------------ Bonificação Gerente --------------");
+            foreach (Gerente gerente in Colaboradores.FuncionariosGerente)
+            {                
+                CalcularBonificacao(gerente);
+            }
+            Console.WriteLine("---------------------------------------------");
+        }
+
+        public void CalcularBonificacaoPorIdFuncionario(int profissao, int idFuncionario)
+        {
+            if(profissao == 1)
+            {
+               Gerente gerente = Colaboradores.BuscarGerentePorId(idFuncionario);
+                if(gerente == null)
+                {
+                    Console.WriteLine("Id gerente inválido");
+                }
+                else
+                {
+                    gerente.RealizarBalancoAnualFuncionario();
+                }
             }
         }
     }

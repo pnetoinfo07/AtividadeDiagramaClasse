@@ -87,5 +87,16 @@ namespace AtividadeDiagramaClasse
                 caixa.ExibirDetalhesFuncionario();
             }
         }
+        public Gerente BuscarGerentePorId(int id)
+        {
+            foreach (Gerente ger in FuncionariosGerente)
+            {
+                if(ger.Id == id)
+                {
+                    return ger;
+                }
+            }
+            return null;
+        }
     }
 }

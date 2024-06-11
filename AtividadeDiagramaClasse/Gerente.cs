@@ -8,7 +8,7 @@ namespace AtividadeDiagramaClasse
 {
     public class Gerente
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
         private double Salario { get; set; }
@@ -34,6 +34,8 @@ namespace AtividadeDiagramaClasse
         public void RealizarBalancoAnualFuncionario()
         {
             Console.WriteLine("---------- Balanço Anual ----------");
+            Console.WriteLine($"Id Funcionário: {Id}");
+            Console.WriteLine($"Funcionario: {Nome}");
             AplicarBonificacaoAnual();
             AplicarProgressaoAnual();
         }

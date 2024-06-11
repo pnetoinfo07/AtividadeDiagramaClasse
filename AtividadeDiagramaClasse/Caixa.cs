@@ -33,6 +33,8 @@ namespace AtividadeDiagramaClasse
         public void RealizarBalancoAnualFuncionario()
         {
             Console.WriteLine("---------- Balanço Anual ----------");
+            Console.WriteLine($"Id Funcionário: {Id}");
+            Console.WriteLine($"Funcionario: {Nome}");
             AplicarBonificacaoAnual();
             AplicarProgressaoAnual();
         }

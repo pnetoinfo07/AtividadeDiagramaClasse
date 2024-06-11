@@ -51,7 +51,7 @@ namespace AtividadeDiagramaClasse
                     Gerenciador.ListarFuncionarios();
                     break;
                 case 2:
-                    //Calcular Bonificacao
+                    CalcularBonificacao();
                     break;
                 case 3:
                     //Adicionar
@@ -64,6 +64,42 @@ namespace AtividadeDiagramaClasse
                     break;
             }
         }
+        private void CalcularBonificacao()
+        {
+            Console.WriteLine("Deseja Realizar o calculo de:");
+            Console.WriteLine("1 - Todos os funcionários");
+            Console.WriteLine("2 - Funcionário por Id");
+            int opcaoSelecionada = int.Parse(Console.ReadLine());
+
+            if(opcaoSelecionada == 1)
+            {
+                Gerenciador.ListarBonificacaoAnualTodaEmpresa();
+            }
+            else if(opcaoSelecionada == 2)
+            {
+                CalcularBonificacaoPorIdFuncionario();
+            }
+            else
+            {
+                Console.WriteLine("Erro opção inválida");
+            }
+        }
+        private void CalcularBonificacaoPorIdFuncionario()
+        {
+            Console.WriteLine("------------------ PROFISSÕES ------------------");
+            Console.WriteLine("1 - Gerente");
+            Console.WriteLine("2 - Caixa");
+            Console.WriteLine("3 - Marketing");
+            Console.WriteLine("4 - Desenvolvedor");
+            Console.WriteLine("Digite qual profissão deseja alterar?");
+            int profissaoSelecionada = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o Id do Funcionário que deseja calcular: ");
+            int idFuncionario = int.Parse(Console.ReadLine());
+
+            Gerenciador.CalcularBonificacaoPorIdFuncionario(profissaoSelecionada, idFuncionario);
+        }
+
         private int SolicitarAcaoUsuario()
         {
             int acao = -1;
