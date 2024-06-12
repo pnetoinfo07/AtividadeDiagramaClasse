@@ -8,7 +8,7 @@ namespace AtividadeDiagramaClasse
 {
     public class Caixa
     {
-        private int Id { get; set; }
+        public int Id { get; private set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
         private double Salario { get; set; }

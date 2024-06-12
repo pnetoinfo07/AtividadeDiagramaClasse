@@ -8,7 +8,7 @@ namespace AtividadeDiagramaClasse
 {
     public class Gerente
     {
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
         private double Salario { get; set; }

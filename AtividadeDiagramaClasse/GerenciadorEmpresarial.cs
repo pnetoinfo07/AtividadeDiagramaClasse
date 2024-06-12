@@ -78,6 +78,42 @@ namespace AtividadeDiagramaClasse
                     gerente.RealizarBalancoAnualFuncionario();
                 }
             }
+            else if(profissao == 2)
+            {
+                Caixa caixa = Colaboradores.BuscarCaixaPorId(idFuncionario);
+                if(caixa == null)
+                {
+                    Console.WriteLine("Id gerente inválido");
+                }
+                else
+                {
+                    caixa.RealizarBalancoAnualFuncionario();
+                }
+            }
+            else if(profissao == 3)
+            {
+               Marketing marketing = Colaboradores.BuscarMarketingPorId(idFuncionario);
+                if(marketing == null)
+                {
+                    Console.WriteLine("Id gerente inválido");
+                }
+                else
+                {
+                    marketing.RealizarBalancoAnualFuncionario();
+                }
+            }
+            else if(profissao == 4)
+            {
+               Desenvolvedor dev = Colaboradores.BuscarDesenvolvedorPorId(idFuncionario);
+                if(dev == null)
+                {
+                    Console.WriteLine("Id gerente inválido");
+                }
+                else
+                {
+                    dev.RealizarBalancoAnualFuncionario();
+                }
+            }
         }
     }
 }

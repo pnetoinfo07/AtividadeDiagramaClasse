@@ -38,7 +38,6 @@ namespace AtividadeDiagramaClasse
             FuncionariosGerente.Add(new Gerente(2, "Manoel", 24, 2000));
             FuncionariosGerente.Add(new Gerente(3, "Carlos", 24, 1300));
         }
-
         public void AdicionarMarketing(Marketing marketing)
         {
             throw new NotImplementedException();
@@ -94,6 +93,39 @@ namespace AtividadeDiagramaClasse
                 if(ger.Id == id)
                 {
                     return ger;
+                }
+            }
+            return null;
+        }
+        public Caixa BuscarCaixaPorId(int id)
+        {
+            foreach (Caixa caixa in FuncionariosCaixa)
+            {
+                if(caixa.Id == id)
+                {
+                    return caixa;
+                }
+            }
+            return null;
+        }
+        public Desenvolvedor BuscarDesenvolvedorPorId(int id)
+        {
+            foreach (Desenvolvedor dev in FuncionariosDesenvolvedor)
+            {
+                if(dev.Id == id)
+                {
+                    return dev;
+                }
+            }
+            return null;
+        }
+        public Marketing BuscarMarketingPorId(int id)
+        {
+            foreach (Marketing marketing in FuncionariosMarketing)
+            {
+                if(marketing.Id == id)
+                {
+                    return marketing;
                 }
             }
             return null;
