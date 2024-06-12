@@ -40,6 +40,7 @@ namespace AtividadeDiagramaClasse
         }
         public void AdicionarMarketing(Marketing marketing)
         {
+            //int proximoId = FuncionariosMarketing.Max(x => x.Id) + 1;
             throw new NotImplementedException();
         }
         public void AdicionarCaixa(Caixa caixa)
