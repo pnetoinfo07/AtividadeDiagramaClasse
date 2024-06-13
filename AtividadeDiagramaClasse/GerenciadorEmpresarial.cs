@@ -122,6 +122,21 @@ namespace AtividadeDiagramaClasse
                 Gerente ger = CriadorFuncionarios.CriarGerente();
                 Colaboradores.AdicionarGerente(ger);
             }
+            else if(profissaoSelecionada == 2)
+            {
+                Caixa caixa = CriadorFuncionarios.CriarCaixa();
+                Colaboradores.AdicionarCaixa(caixa);
+            }
+            else if(profissaoSelecionada == 3)
+            {
+                Marketing marketing = CriadorFuncionarios.CriarMarketing();
+                Colaboradores.AdicionarMarketing(marketing);
+            }
+            else if(profissaoSelecionada == 4)
+            {
+                Desenvolvedor dev = CriadorFuncionarios.CriarDesenvolvedor();
+                Colaboradores.AdicionarDesenvolvedor(dev);
+            }
         }
     }
 }

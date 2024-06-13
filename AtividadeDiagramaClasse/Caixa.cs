@@ -21,6 +21,10 @@ namespace AtividadeDiagramaClasse
             Salario = salario;
             BonusAnual = Salario * 0.3;
         }
+        public void AlterarID(int id)
+        {
+            Id = id;
+        }
         private void AplicarBonificacaoAnual()
         {
             Console.WriteLine($"Sua bonficacao será {BonusAnual}");

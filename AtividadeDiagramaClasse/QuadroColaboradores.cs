@@ -40,15 +40,23 @@ namespace AtividadeDiagramaClasse
         }
         public void AdicionarMarketing(Marketing marketing)
         {
-            //;
+            int novoID = FuncionariosMarketing
+                        .Max(marketing => marketing.Id) + 1;
+            marketing.AlterarID(novoID);
             FuncionariosMarketing.Add(marketing);
         }
         public void AdicionarCaixa(Caixa caixa)
         {
+            int novoID = FuncionariosCaixa
+                        .Max(caixa => caixa.Id) + 1;
+            caixa.AlterarID(novoID);
             FuncionariosCaixa.Add(caixa);
         }
         public void AdicionarDesenvolvedor(Desenvolvedor desenvolvedor)
         {
+            int novoID = FuncionariosDesenvolvedor
+                        .Max(desenvolvedor => desenvolvedor.Id) + 1;
+            desenvolvedor.AlterarID(novoID);
             FuncionariosDesenvolvedor.Add(desenvolvedor);
         }
         public void AdicionarGerente(Gerente gerente)
