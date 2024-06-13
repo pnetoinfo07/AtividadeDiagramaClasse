@@ -54,7 +54,7 @@ namespace AtividadeDiagramaClasse
                     CalcularBonificacao();
                     break;
                 case 3:
-                    //Adicionar
+                    AdicionarFuncionario();
                     break;
                 case 4:
                     //Remover
@@ -125,6 +125,19 @@ namespace AtividadeDiagramaClasse
                               $"\n 4 - Remover" +
                               $"\n 5 - Editar" +
                               $"\n --------------------------------");
+        }
+
+        private void AdicionarFuncionario()
+        {
+            Console.WriteLine("------------------ PROFISSÕES ------------------");
+            Console.WriteLine("1 - Gerente");
+            Console.WriteLine("2 - Caixa");
+            Console.WriteLine("3 - Marketing");
+            Console.WriteLine("4 - Desenvolvedor");
+            Console.WriteLine("Digite qual profissão deseja adicionar?");
+            int profissaoSelecionada = int.Parse(Console.ReadLine());
+
+            Gerenciador.AdicionarFuncionarios(profissaoSelecionada);
         }
     }
 }

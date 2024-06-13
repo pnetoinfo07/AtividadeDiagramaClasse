@@ -1,3 +1,3 @@
 ﻿using AtividadeDiagramaClasse;
-Sistema  s = new Sistema();
+Sistema s = new Sistema();
 s.IniciarSistema();

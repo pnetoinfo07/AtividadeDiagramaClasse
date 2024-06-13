@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AtividadeDiagramaClasse
 {
-    public class CriadorFuncionarios
+    public static class CriadorFuncionarios
     {
-        public Marketing CriarMarketing()
+        public static Marketing CriarMarketing()
         {
             Console.WriteLine("Qual o nome do funcionário?");
             string nome = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace AtividadeDiagramaClasse
 
             return marketing;
         }
-        public Gerente CriarGerente()
+        public static Gerente CriarGerente()
         {
             Console.WriteLine("Qual o nome do funcionário?");
             string nome = Console.ReadLine();
@@ -34,7 +34,7 @@ namespace AtividadeDiagramaClasse
 
             return gerente;
         }
-        public Caixa CriarCaixa()
+        public static Caixa CriarCaixa()
         {
             Console.WriteLine("Qual o nome do funcionário?");
             string nome = Console.ReadLine();
@@ -47,7 +47,7 @@ namespace AtividadeDiagramaClasse
 
             return caixa;
         }
-        public Desenvolvedor CriarDesenvolvedor()
+        public static Desenvolvedor CriarDesenvolvedor()
         {
             Console.WriteLine("Qual o nome do funcionário?");
             string nome = Console.ReadLine();

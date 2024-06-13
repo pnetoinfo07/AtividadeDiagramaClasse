@@ -40,20 +40,23 @@ namespace AtividadeDiagramaClasse
         }
         public void AdicionarMarketing(Marketing marketing)
         {
-            //int proximoId = FuncionariosMarketing.Max(x => x.Id) + 1;
-            throw new NotImplementedException();
+            //;
+            FuncionariosMarketing.Add(marketing);
         }
         public void AdicionarCaixa(Caixa caixa)
         {
-            throw new NotImplementedException();
+            FuncionariosCaixa.Add(caixa);
         }
         public void AdicionarDesenvolvedor(Desenvolvedor desenvolvedor)
         {
-            throw new NotImplementedException();
+            FuncionariosDesenvolvedor.Add(desenvolvedor);
         }
         public void AdicionarGerente(Gerente gerente)
         {
-            throw new NotImplementedException();
+            int novoID = FuncionariosGerente
+                        .Max(gerente => gerente.Id) + 1;
+            gerente.AlterarID(novoID);
+            FuncionariosGerente.Add(gerente);
         }
         public void ListarGerente()
         {

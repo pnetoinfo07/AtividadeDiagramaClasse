@@ -115,5 +115,13 @@ namespace AtividadeDiagramaClasse
                 }
             }
         }
+        public void AdicionarFuncionarios(int profissaoSelecionada)
+        {
+            if(profissaoSelecionada == 1)
+            {
+                Gerente ger = CriadorFuncionarios.CriarGerente();
+                Colaboradores.AdicionarGerente(ger);
+            }
+        }
     }
 }
