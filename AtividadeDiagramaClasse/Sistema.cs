@@ -18,9 +18,13 @@ namespace AtividadeDiagramaClasse
 
         public void IniciarSistema()
         {
-            ExibirMenu();
-            int acaoSelecionada = SolicitarAcaoUsuario();
-            RealizarAcaoSelecionado(acaoSelecionada);
+            int acaoSelecionada = -1;
+            while (acaoSelecionada != 0)
+            {
+                ExibirMenu();
+                acaoSelecionada = SolicitarAcaoUsuario();
+                RealizarAcaoSelecionado(acaoSelecionada);
+            }
         }
         private void RealizarAcaoSelecionado(int acaoSelecionada)
         {
@@ -57,10 +61,10 @@ namespace AtividadeDiagramaClasse
                     AdicionarFuncionario();
                     break;
                 case 4:
-                    //Remover
+                    RemoverFuncionario();
                     break;
                 case 5:
-                    //Editar
+                    EditarFuncionario();
                     break;
             }
         }
@@ -71,11 +75,11 @@ namespace AtividadeDiagramaClasse
             Console.WriteLine("2 - Funcionário por Id");
             int opcaoSelecionada = int.Parse(Console.ReadLine());
 
-            if(opcaoSelecionada == 1)
+            if (opcaoSelecionada == 1)
             {
                 Gerenciador.ListarBonificacaoAnualTodaEmpresa();
             }
-            else if(opcaoSelecionada == 2)
+            else if (opcaoSelecionada == 2)
             {
                 CalcularBonificacaoPorIdFuncionario();
             }
@@ -138,6 +142,47 @@ namespace AtividadeDiagramaClasse
             int profissaoSelecionada = int.Parse(Console.ReadLine());
 
             Gerenciador.AdicionarFuncionarios(profissaoSelecionada);
+        }
+
+        public void RemoverFuncionario()
+        {
+            Console.WriteLine("------------------ PROFISSÕES ------------------");
+            Console.WriteLine("1 - Gerente");
+            Console.WriteLine("2 - Caixa");
+            Console.WriteLine("3 - Marketing");
+            Console.WriteLine("4 - Desenvolvedor");
+            Console.WriteLine("Digite qual profissão deseja remover?");
+            int profissaoSelecionada = int.Parse(Console.ReadLine());
+
+            Gerenciador.ListarFuncionariosPorProfissao(profissaoSelecionada);
+            Console.WriteLine("Qual id de funcionário deseja remover");
+            int idFuncionario = int.Parse(Console.ReadLine());
+
+            Gerenciador.ExcluirFuncionario(profissaoSelecionada, idFuncionario);
+        }
+        public void EditarFuncionario()
+        {
+            Console.WriteLine("------------------ PROFISSÕES ------------------");
+            Console.WriteLine("1 - Gerente");
+            Console.WriteLine("2 - Caixa");
+            Console.WriteLine("3 - Marketing");
+            Console.WriteLine("4 - Desenvolvedor");
+            Console.WriteLine("Digite qual profissão deseja remover?");
+            int profissaoSelecionada = int.Parse(Console.ReadLine());
+
+            Gerenciador.ListarFuncionariosPorProfissao(profissaoSelecionada);
+            
+            Console.WriteLine("Qual id de funcionário deseja remover");
+            int idFuncionario = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("1 - Nome");
+            Console.WriteLine("2 - Idade");
+            Console.WriteLine("Qual campo deseja atualizar?");
+            int campo =  int.Parse(Console.ReadLine());
+            Console.WriteLine("Novo valor para o campo?");
+            string resposta = Console.ReadLine();
+
+            Gerenciador.EditarFuncionario(profissaoSelecionada, idFuncionario, campo, resposta);
         }
     }
 }

@@ -38,6 +38,22 @@ namespace AtividadeDiagramaClasse
             FuncionariosGerente.Add(new Gerente(2, "Manoel", 24, 2000));
             FuncionariosGerente.Add(new Gerente(3, "Carlos", 24, 1300));
         }
+        public void RemoverMarketing(Marketing marketing)
+        {
+            FuncionariosMarketing.Remove(marketing);
+        }
+        public void RemoverCaixa(Caixa caixa)
+        {
+            FuncionariosCaixa.Remove(caixa);
+        }
+        public void RemoverDesenvolvedor(Desenvolvedor dev)
+        {
+            FuncionariosDesenvolvedor.Remove(dev);
+        }
+        public void RemoverGerente(Gerente ger)
+        {
+            FuncionariosGerente.Remove(ger);
+        }
         public void AdicionarMarketing(Marketing marketing)
         {
             int novoID = FuncionariosMarketing

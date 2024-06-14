@@ -138,5 +138,99 @@ namespace AtividadeDiagramaClasse
                 Colaboradores.AdicionarDesenvolvedor(dev);
             }
         }
+        public void ListarFuncionariosPorProfissao(int profissaoSelecionada)
+        {
+            if (profissaoSelecionada == 1)
+            {
+                Colaboradores.ListarGerente();
+            }
+            else if(profissaoSelecionada == 2)
+            {
+                Colaboradores.ListarCaixa();
+            }
+            else if(profissaoSelecionada == 3)
+            {
+                Colaboradores.ListarMarketing();
+            }
+            else if(profissaoSelecionada == 4)
+            {
+                Colaboradores.ListarDesenvolvedor();
+            }
+        }
+    
+        public void ExcluirFuncionario(int profissaoSelecionado, int idFuncionario)
+        {      
+            if(profissaoSelecionado == 1)
+            {
+                Gerente ger = Colaboradores.BuscarGerentePorId(idFuncionario);
+                Colaboradores.RemoverGerente(ger);
+            }
+            else if(profissaoSelecionado == 2)
+            {
+                Caixa caixa = Colaboradores.BuscarCaixaPorId(idFuncionario);
+                Colaboradores.RemoverCaixa(caixa);
+            }
+            else if(profissaoSelecionado == 3)
+            {
+                Marketing marketing = Colaboradores.BuscarMarketingPorId(idFuncionario);
+                Colaboradores.RemoverMarketing(marketing);
+            }
+            else if(profissaoSelecionado == 4)
+            {
+                Desenvolvedor dev = Colaboradores.BuscarDesenvolvedorPorId(idFuncionario);
+                Colaboradores.RemoverDesenvolvedor(dev);
+            }
+        }
+        public void EditarFuncionario(int profissaoSelecionada, int idFuncionario, int campo, string resposta)
+        {
+            if(profissaoSelecionada == 1)
+            {
+                Gerente ger = Colaboradores.BuscarGerentePorId(idFuncionario);
+                if(campo == 1)
+                {
+                    ger.Nome = resposta;
+                }
+                else if (campo == 2)
+                {
+                    ger.Idade = int.Parse(resposta);
+                }
+            }
+            if(profissaoSelecionada == 2)
+            {
+                Caixa caixa = Colaboradores.BuscarCaixaPorId(idFuncionario);
+                if(campo == 1)
+                {
+                    caixa.Nome = resposta;
+                }
+                else if (campo == 2)
+                {
+                    caixa.Idade = int.Parse(resposta);
+                }
+            }
+            if(profissaoSelecionada == 3)
+            {
+                Marketing mark = Colaboradores.BuscarMarketingPorId(idFuncionario);
+                if(campo == 1)
+                {
+                    mark.Nome = resposta;
+                }
+                else if (campo == 2)
+                {
+                    mark.Idade = int.Parse(resposta);
+                }
+            }
+            if(profissaoSelecionada == 4)
+            {
+                Desenvolvedor dev = Colaboradores.BuscarDesenvolvedorPorId(idFuncionario);
+                if(campo == 1)
+                {
+                    dev.Nome = resposta;
+                }
+                else if (campo == 2)
+                {
+                    dev.Idade = int.Parse(resposta);
+                }
+            }
+        }
     }
 }
