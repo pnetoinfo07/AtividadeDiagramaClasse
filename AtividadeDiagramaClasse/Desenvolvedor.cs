@@ -6,45 +6,17 @@ using System.Threading.Tasks;
 
 namespace AtividadeDiagramaClasse
 {
-    public class Desenvolvedor
+    public class Desenvolvedor : Funcionario
     {
-        public int Id { get; private set; }
-        public string Nome { get; set; }
-        public int Idade { get; set; }
-        private double Salario { get; set; }
-        public double BonusAnual { get; set; }
         public Desenvolvedor(int id, string nome, int idade, double salario)
+                            : base(id, nome, idade, salario)
         {
-            Id = id;
-            Nome = nome;
-            Idade = idade;
-            Salario = salario;
             BonusAnual = Salario * 0.5;
         }
-        private void AplicarBonificacaoAnual()
+        protected override void AplicarProgressaoAnual()
         {
-            Console.WriteLine($"Sua bonficacao será {BonusAnual}");
-        }
-        private void AplicarProgressaoAnual()
-        {
-            Salario = Salario + (Salario * 0.20);
+            Salario = Salario + (Salario * 0.40);
             Console.WriteLine($"Seu novo sálario é {Salario}");
-        }
-        public void RealizarBalancoAnualFuncionario()
-        {
-            Console.WriteLine("---------- Balanço Anual ----------");
-            Console.WriteLine($"Id Funcionário: {Id}");
-            Console.WriteLine($"Funcionario: {Nome}");
-            AplicarBonificacaoAnual();
-            AplicarProgressaoAnual();
-        }
-        public void ExibirDetalhesFuncionario()
-        {
-            Console.WriteLine($"------ Funcionário {Id}-----------" +
-                                $"\n Nome: {Nome}" +
-                                $"\n Idade: {Idade}" +
-                                $"\n Salário: {Salario}" +
-                              $"\n ----------------------------------");
         }
     }
 }

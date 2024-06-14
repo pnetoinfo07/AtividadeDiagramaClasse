@@ -13,21 +13,9 @@ namespace AtividadeDiagramaClasse
         {
             Colaboradores = new QuadroColaboradores();
         }
-        public void CalcularBonificacao(Gerente gerente)
+        public void CalcularBonificacao(Funcionario funcionario)
         {
-            gerente.RealizarBalancoAnualFuncionario();
-        }
-        public void CalcularBonificacao(Caixa caixa)
-        {
-            caixa.RealizarBalancoAnualFuncionario();
-        }
-        public void CalcularBonificacao(Marketing marketing)
-        {
-            marketing.RealizarBalancoAnualFuncionario();
-        }
-        public void CalcularBonificacao(Desenvolvedor desenvolvedor)
-        {
-            desenvolvedor.RealizarBalancoAnualFuncionario();
+            funcionario.RealizarBalancoAnualFuncionario();
         }
         public void ListarFuncionarios()
         {
@@ -47,7 +35,7 @@ namespace AtividadeDiagramaClasse
             Console.WriteLine("------------ Bonificação Maketing --------------");
             foreach (Marketing marketing in Colaboradores.FuncionariosMarketing)
             {               
-                CalcularBonificacao(marketing);
+               // CalcularBonificacao(marketing);
             }
             Console.WriteLine("---------------------------------------------");
             Console.WriteLine("------------ Bonificação Desenvolvedor --------------");
@@ -59,7 +47,7 @@ namespace AtividadeDiagramaClasse
             Console.WriteLine("------------ Bonificação Gerente --------------");
             foreach (Gerente gerente in Colaboradores.FuncionariosGerente)
             {                
-                CalcularBonificacao(gerente);
+               // CalcularBonificacao(gerente);
             }
             Console.WriteLine("---------------------------------------------");
         }
