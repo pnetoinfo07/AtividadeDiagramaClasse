@@ -51,5 +51,9 @@ namespace AtividadeDiagramaClasse
                                 $"\n Salário: {Salario}" +
                               $"\n ----------------------------------");
         }
+        public void AumentarSalario()
+        {
+            Salario = Salario + Salario * 0.1;
+        }
     }
 }

@@ -66,6 +66,9 @@ namespace AtividadeDiagramaClasse
                 case 5:
                     EditarFuncionario();
                     break;
+                case 6:
+                    AumentarSalario();
+                    break;
             }
         }
         private void CalcularBonificacao()
@@ -107,12 +110,12 @@ namespace AtividadeDiagramaClasse
         private int SolicitarAcaoUsuario()
         {
             int acao = -1;
-            while (acao <= 0 || acao > 5)
+            while (acao <= 0 || acao > 6)
             {
                 Console.WriteLine("Digite qual a ação que deseja realizar?");
                 acao = int.Parse(Console.ReadLine());
 
-                if (acao > 5 || acao <= 0)
+                if (acao > 6 || acao <= 0)
                 {
                     Console.WriteLine("Número inválido!!\nFavor digite um número válido!!");
                 }
@@ -128,6 +131,7 @@ namespace AtividadeDiagramaClasse
                               $"\n 3 - Adicionar" +
                               $"\n 4 - Remover" +
                               $"\n 5 - Editar" +
+                              $"\n 6 - Realizar Aumento" +
                               $"\n --------------------------------");
         }
 
@@ -184,5 +188,23 @@ namespace AtividadeDiagramaClasse
 
             Gerenciador.EditarFuncionario(profissaoSelecionada, idFuncionario, campo, resposta);
         }
+        public void AumentarSalario()
+        {
+            Console.WriteLine("------------------ PROFISSÕES ------------------");
+            Console.WriteLine("1 - Gerente");
+            Console.WriteLine("2 - Caixa");
+            Console.WriteLine("3 - Marketing");
+            Console.WriteLine("4 - Desenvolvedor");
+            Console.WriteLine("Digite qual profissão deseja remover?");
+            int profissaoSelecionada = int.Parse(Console.ReadLine());
+
+            Gerenciador.ListarFuncionariosPorProfissao(profissaoSelecionada);
+
+            Console.WriteLine("Qual id de funcionário deseja remover");
+            int idFuncionario = int.Parse(Console.ReadLine());
+
+            Gerenciador.AumentarSalario(profissaoSelecionada, idFuncionario);
+        }
     }
+    
 }

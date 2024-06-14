@@ -232,5 +232,29 @@ namespace AtividadeDiagramaClasse
                 }
             }
         }
+
+        public void AumentarSalario(int profissaoSelecionada, int idFuncionario)
+        {
+            if(profissaoSelecionada == 1)
+            {
+                Gerente gerente = Colaboradores.BuscarGerentePorId(idFuncionario);
+                gerente.AumentarSalario();
+            }
+            else if(profissaoSelecionada == 2)
+            {
+                Caixa caixa = Colaboradores.BuscarCaixaPorId(idFuncionario);
+                caixa.AumentarSalario();
+            }
+            else if(profissaoSelecionada == 3)
+            {
+                Marketing marketing = Colaboradores.BuscarMarketingPorId(idFuncionario);
+                marketing.AumentarSalario();
+            }
+            else if(profissaoSelecionada == 4)
+            {
+                Desenvolvedor dev = Colaboradores.BuscarDesenvolvedorPorId(idFuncionario);
+                dev.AumentarSalario();
+            }
+        }
     }
 }
